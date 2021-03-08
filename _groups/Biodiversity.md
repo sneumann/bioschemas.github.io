@@ -36,4 +36,5 @@ members:
     - ylebras
     - RomanBaum
     - MattYoder
+    - GregWhitbread
 ---
