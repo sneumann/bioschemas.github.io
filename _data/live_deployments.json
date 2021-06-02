@@ -1145,6 +1145,24 @@
           "exampleURL": "https://bioschemas.org/tutorials/what_why_bioschemas"
         }
       ]
+    },
+    {
+      "name": "Protein Ensemble Database (PED)",
+      "url": "https://proteinensemble.org/",
+      "nodes": "IT",
+      "sitemap": "https://proteinensemble.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://proteinensemble.org/"
+        }
+      ]
     }
   ]
 }
