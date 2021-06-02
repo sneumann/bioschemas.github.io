@@ -152,6 +152,24 @@
           "profileName": "Dataset",
           "conformsTo": "0.2",
           "exampleURL": "http://mobidb.bio.unipd.it/"
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11",
+          "exampleURL": "https://mobidb.org/Q12959",
+          "highlight": "189.5 million proteins"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": "0.5-DRAFT",
+          "exampleURL": "https://mobidb.org/Q12959",
+          "highlight": "64 billion annotations"
+        },
+        {
+          "profileName": "SequenceRange",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://mobidb.org/Q12959",
+          "highlight": "64 billion annotations"
         }
       ]
     },
