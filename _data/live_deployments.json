@@ -1165,20 +1165,18 @@
         {
           "profileName": "Protein",
           "conformsTo": "0.11",
-          "exampleURL": "https://mobidb.org/Q12959",
-          "highlight": "189.5 million proteins"
+          "exampleURL": "https://proteinensemble.org/PED00174",
+          "highlight": "90 proteins"
         },
         {
           "profileName": "ProteinAnnotation",
           "conformsTo": "0.5-DRAFT",
-          "exampleURL": "https://mobidb.org/Q12959",
-          "highlight": "64 billion annotations"
+          "exampleURL": "https://proteinensemble.org/PED00174"
         },
         {
           "profileName": "SequenceRange",
           "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://mobidb.org/Q12959",
-          "highlight": "64 billion annotations"
+          "exampleURL": "https://proteinensemble.org/PED00174"
         }
       ]
     }
