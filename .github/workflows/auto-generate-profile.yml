@@ -57,10 +57,6 @@ jobs:
         run: git commit -m "Updating Profile"  # How to commit with a specific msg
       - name: Push Code to Branch
         run: git push origin HEAD:profile_auto_generation  # Updated to master after the merge
-      - name: Display Changed Files
-        if: steps.changed_files.outputs.files_changed == 'true'
+      - name: End Workflow
         run: |
-          for file in ${{ steps.changed_files.outputs.files_changed }}; do
-            echo "$file was generated"
-          done
-          echo "End Workflow! ^^"
+          echo "End Workflow!"
