@@ -1,0 +1,4 @@
+[submodule "_data/specifications"]
+    path = _data/specifications
+    url = https://github.com/BioSchemas/specifications.git 
+    branch = git-actions-test
