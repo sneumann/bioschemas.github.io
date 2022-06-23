@@ -5,7 +5,7 @@ name: generate-profile-web-page
   
 on: 
   push:
-    paths: ['_data/**.json', '_data/specifications/ComputationalTool/jsonld/**.json']
+    paths: ['_data/**.json', 'specifications/ComputationalTool/jsonld/**.json']
 
 jobs:
   generate-profile:
