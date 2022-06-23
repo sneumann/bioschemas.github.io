@@ -32,7 +32,6 @@ jobs:
       - name: Run Action
         id: run-action
         users: releasehub-com/github-action-create-pr-parent-submodule@v1
-
         with: 
           github_token: ${{ secrets.RELEASE_HUB_SECRET }} 
           parent_repository: ${{ env.PARENT_REPOSITORY }} 
