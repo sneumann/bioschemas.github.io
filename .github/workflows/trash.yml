@@ -1,0 +1,42 @@
+---
+name: Submodule Updates
+
+#############################
+# Start the Job on All Push #
+#############################
+on:
+  push:
+    branches: [profile_auto_generation, git-actions-test]
+
+###############
+# Set the Job #
+###############
+jobs:
+  build:
+    name: Submodule Update
+    runs-on: ubuntu-latest
+    env:
+      PARENT_repository: ''
+      CHECKOUT_BRANCH: ''
+      PR_AGAINST_BRANCH: ''
+      OWNER: ''
+    steps:
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        users: actions/checkout@v2
+
+      ####################################
+      # Run the action against code base #
+      ####################################
+      - name: Run Action
+        id: run-action
+        users: releasehub-com/github-action-create-pr-parent-submodule@v1
+
+        with: 
+          github_token: ${{ secrets.RELEASE_HUB_SECRET }} 
+          parent_repository: ${{ env.PARENT_REPOSITORY }} 
+          checkout_branch: ${{ env.CHECKOUT_BRANCH }}
+          pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
+          owner: ${{ env.OWNER}}
