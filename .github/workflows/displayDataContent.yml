@@ -8,6 +8,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
+        uses: actions/git-checkout-submodule-action@master
       - name: ls
         run: ls specifications
