@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from pydoc import doc
 import yaml
 from colorama import Fore
@@ -186,7 +187,6 @@ def generate_transformed_profile(g):
 
     return transformed_profile
 
-
 # ## Main Script
 # 
 # Prepare the YAML data, save then display it
@@ -194,18 +194,11 @@ def generate_transformed_profile(g):
 
 # For each new uploaded JSON-LD file 
 for arg in sys.argv:
-    if "_data" in arg.split('/'):
+    if ".github" in arg.split('/'):
+        print(Fore.YELLOW + 'No Profiles added.' + Style.RESET_ALL)
+    else:
         arglist= arg.split('/')
-        arglist.remove('_data')
-        profile_path=""
-
-        if "specifications" in arglist:
-            print ("//to do")
-        else:
-            for item in arglist:
-                profile_path += item
-
-        profile_name=profile_path.split('/')[-1].split('.')[0]
+        profile_name=arg.split('/')[-1].split('.')[0]
         print(Fore.YELLOW + 'added/updated profile: ' + profile_name + Style.RESET_ALL)
 
         in_file = "./"+arg
@@ -236,22 +229,23 @@ for arg in sys.argv:
 
         ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
         
-        folderpath = "./pages/_profiles/"+profile_name
+        folderpath = "./Profiles/"+profile_name
+        out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
+        out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
+
         if path.exists(folderpath):
             print ("folder esists")
         else:
+            #os.makedirs(os.path.dirname(folderpath), exist_ok=True)
+            Path(folderpath).mkdir(parents=True, exist_ok=True) 
             print("Create folder : ", folderpath)
-            os.mkdir(folderpath)
-        
-        out_YAML_file = "./pages/_profiles/"+profile_name+"/"+ "generated_"+profile_name+".yaml"
+
 
         with open(out_YAML_file, "w", encoding="utf-8") as o:
             yaml.dump(transformed_profile, o)
 
         print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
         
-        out_HTML_file= "./pages/_profiles/"+profile_name+"/"+ transformed_profile["spec_info"]["version"] +".html"
-
         top_of_the_page='''
         redirect_from:
         - "devSpecs/Tool/specification"
