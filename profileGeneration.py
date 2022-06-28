@@ -196,9 +196,7 @@ def generate_transformed_profile(g):
 for arg in sys.argv:
     if ".github" in arg.split('/'):
         print(Fore.YELLOW + 'No Profiles added.' + Style.RESET_ALL)
-    elif 'py' in arg.split('.'):
-        continue
-    else:
+    elif 'json' in arg.split('.'):
         arglist= arg.split('/')
         profile_name=arg.split('/')[-1].split('.')[0]
         print(Fore.YELLOW + 'added/updated profile: ' + profile_name + Style.RESET_ALL)
