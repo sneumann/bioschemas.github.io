@@ -1,44 +1,44 @@
 ---
-        redirect_from:
-        - "devSpecs/Tool/specification"
-        - "devSpecs/Tool/specification/"
-        - "/devSpecs/Tool/"
-        - "/devSpecs/Tool"
-        - "/specifications/drafts/Tool"
-        - "/specifications/drafts/Tool/"
-        - "/profiles/Tool/"
-        - "/profiles/Tool"
-        - "/profiles/ComputationalTool/"
-        - "/profiles/ComputationalTool"
-        - "/profiles/Tool/0.6-DRAFT/"
+redirect_from:
+- "devSpecs/Tool/specification"
+- "devSpecs/Tool/specification/"
+- "/devSpecs/Tool/"
+- "/devSpecs/Tool"
+- "/specifications/drafts/Tool"
+- "/specifications/drafts/Tool/"
+- "/profiles/Tool/"
+- "/profiles/Tool"
+- "/profiles/ComputationalTool/"
+- "/profiles/ComputationalTool"
+- "/profiles/Tool/0.6-DRAFT/"
 
-        hierarchy:
-        - Thing
-        - CreativeWork
-        - SoftwareApplication
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareApplication
 
-        name: ComputationalTool
+name: ComputationalTool
 
-        previous_version: 0.5-DRAFT
-        previous_release:
+previous_version: 0.5-DRAFT
+previous_release:
 
-        status: revision
-        spec_type: Profile
-        group: tools
-        use_cases_url: '/useCases/ComputationalTool'
-        cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
-        gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
-        live_deploy: /liveDeploys
+status: revision
+spec_type: Profile
+group: tools
+use_cases_url: '/useCases/ComputationalTool'
+cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
+live_deploy: /liveDeploys
 
-        parent_type: SoftwareApplication
-        hierarchy:
-        - Thing
-        - CreativeWork
-        - SoftwareApplication
+parent_type: SoftwareApplication
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareApplication
 
-        # spec_info content generated using GOWeb
-        # DO NOT MANUALLY EDIT THE CONTENT
-        mapping:
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+mapping:
 - bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
@@ -47,7 +47,7 @@
   example: ''
   expected_types:
   - Text
-  marginality: Required
+  marginality: Minimum
   property: name
   type: ''
   type_url: ''
@@ -59,10 +59,10 @@
     Wikidata URIs)'
   example: ''
   expected_types:
-  - Propertyvalue
   - Uri
+  - Propertyvalue
   - Text
-  marginality: Required
+  marginality: Minimum
   property: taxonRank
   type: ''
   type_url: ''
@@ -75,10 +75,10 @@
     Inverse property: childTaxon'
   example: ''
   expected_types:
-  - Taxon
   - Uri
+  - Taxon
   - Text
-  marginality: Minimum
+  marginality: Recommended
   property: parentTaxon
   type: ''
   type_url: ''
@@ -89,7 +89,7 @@
     (botanical) name for that taxon'
   example: ''
   expected_types: []
-  marginality: Minimum
+  marginality: Recommended
   property: scientificName
   type: ''
   type_url: ''
@@ -100,14 +100,14 @@
   example: ''
   expected_types:
   - Uri
-  marginality: Minimum
+  marginality: Recommended
   property: url
   type: ''
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon
+  description: A Test type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon
     or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept An additional type
     for the item, typically used for adding more specific types from external vocabularies
     in microdata syntax. This is a relationship between something and a class that
@@ -156,8 +156,8 @@
     Inverse property: parentTaxon'
   example: ''
   expected_types:
-  - Taxon
   - Uri
+  - Taxon
   - Text
   marginality: Optional
   property: childTaxon
@@ -216,8 +216,8 @@
     \ more details.\n"
   example: ''
   expected_types:
-  - Propertyvalue
   - Uri
+  - Propertyvalue
   - Text
   marginality: Optional
   property: identifier
@@ -258,8 +258,8 @@
     Inverse property: mainEntity.'
   example: ''
   expected_types:
-  - Creativework
   - Uri
+  - Creativework
   marginality: Optional
   property: mainEntityOfPage
   type: ''
@@ -278,7 +278,7 @@
   type: ''
   type_url: ''
 spec_info:
-  description: 'TEST Bioschemas profile for describing a biological taxon This profile
+  description: 'TEST Bioschemas profile sss describing a biological taxon This profile
     aims to denote a taxon by common properties such as its scientific name, taxonomic
     rank and vernacular names. It is also a means to link to existing taxonomic registers
     where each taxon has a URI. <br/>Changes in 0.7: <ul><li>Use of identifier to

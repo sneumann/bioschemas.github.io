@@ -3,7 +3,8 @@
 
 name: generate-profile-web-page
   
-on: 
+on:
+  workflow_dispatch:
   push:
     paths: ['_data/**.json', 'specifications/ComputationalTool/jsonld/**.json']
 
