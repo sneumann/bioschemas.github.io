@@ -441,7 +441,7 @@
         {
           "profileName": "Dataset",
           "conformsTo": "0.1",
-          "exampleURL": "https://www.omicsdi.org/#/dataset/arrayexpress-repository/E-MTAB-6848",
+          "exampleURL": "https://www.omicsdi.org/dataset/arrayexpress-repository/E-MTAB-6848",
           "highlight": "Over 150,000 datasets"
         }
       ]
